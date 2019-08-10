@@ -1,0 +1,32 @@
+{
+  "name": "kmadejski/ezplatform-maintenance-mode",
+  "description": "Maintenance mode bundle for eZ Platform v2.5+",
+  "license": "GPL-2.0-only",
+  "type": "ezplatform-bundle",
+  "homepage": "https://github.com/kmadejski/ezplatform-maintenance-mode",
+  "authors": [
+    {
+      "name": "eZ Systems | Kamil Madejski",
+      "email": "kamil.madejski@ez.no"
+    }
+  ],
+  "prefer-stable": true,
+  "require": {
+    "php": "^7.1",
+    "ezsystems/ezpublish-kernel": "^7.5"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.2.5",
+    "friendsofphp/php-cs-fixer": "~2.15.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "EzSystems\\EzPlatformMaintenanceModeBundle\\": "src/bundle"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "EzSystems\\EzPlatformMaintenanceModeBundle\\Tests\\": "tests/bundle"
+    }
+  }
+}

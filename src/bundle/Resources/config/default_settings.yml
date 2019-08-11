@@ -1,6 +1,5 @@
 parameters:
-    maintenance_mode:
-        enabled: false
-        allowed_ips: []
-        response_code: 503
-        template: null
+    ezsettings.default.maintenance_mode.enabled: false
+    ezsettings.default.maintenance_mode.allowed_ips: []
+    ezsettings.default.maintenance_mode.response_code: 503
+    ezsettings.default.maintenance_mode.template: ~

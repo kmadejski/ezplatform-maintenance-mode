@@ -46,6 +46,10 @@ final class MaintenanceModeSubscriber implements EventSubscriberInterface
 
     public function onKernelRequest(GetResponseEvent $event): void
     {
+        if ($this->kernelEnvironment === 'dev') {
+            return;
+        }
+
         $request = $event->getRequest();
 
         /** @var \eZ\Publish\Core\MVC\Symfony\SiteAccess $siteAccess */

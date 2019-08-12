@@ -3,3 +3,9 @@ services:
         autowire: true
         autoconfigure: true
         public: false
+
+    EzSystems\EzPlatformMaintenanceModeBundle\Event\Subscriber\MaintenanceModeSubscriber:
+        arguments:
+            $kernelEnvironment: '%kernel.environment%'
+        tags:
+            - { name: kernel.event_subscriber }

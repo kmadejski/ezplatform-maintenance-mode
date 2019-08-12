@@ -5,20 +5,12 @@ In this mode the site (or particular SiteAccess) will not be available for the e
 
 # Installation
 
-1) Since the bundle is not on packagist yet, you have to add the repository manually to your `composer.json` file:
-```json
-    "repositories": [
-        { "type": "composer", "url": "https://updates.ez.no/ttl" },
-        { "type": "vcs", "url": "https://github.com/kmadejski/ezplatform-maintenance-mode.git" }
-    ],
-```
-
-2) Install the bundle:
+- Install the bundle:
 ```bash
 composer require kmadejski/ezplatform-maintenance-mode:dev-master
 ```
 
-3) Enable the bundle in your `app/AppKernel.php` file:
+- Enable the bundle in your `app/AppKernel.php` file:
 ```php
     $bundles = [
         ...
@@ -26,9 +18,9 @@ composer require kmadejski/ezplatform-maintenance-mode:dev-master
     ];
 ```
 
-4) Clear application cache:
+- Clear application cache:
 ```bash
-php bin/console cache:clear 
+php bin/console cache:clear --env=prod
 ```
 
 # Configuration

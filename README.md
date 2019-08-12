@@ -7,7 +7,7 @@ In this mode the site (or particular SiteAccess) will not be available for the e
 
 - Install the bundle:
 ```bash
-composer require kmadejski/ezplatform-maintenance-mode:dev-master
+composer require kmadejski/ezplatform-maintenance-mode
 ```
 
 - Enable the bundle in your `app/AppKernel.php` file:

@@ -41,7 +41,7 @@ ezpublish:
         default:
             maintenance_mode:
                 enabled: true
-                allowed_ips: ['::1', '10.0.0.1']
+                allowed_ips: ['::1', '10.0.0.1', '192.168.0.0/16']
                 response_code: 404
                 template: '@Acme/custom_maintenance.html.twig'
 ```

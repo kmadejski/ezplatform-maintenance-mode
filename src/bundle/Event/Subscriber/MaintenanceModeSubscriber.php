@@ -9,6 +9,7 @@ namespace EzSystems\EzPlatformMaintenanceModeBundle\Event\Subscriber;
 use eZ\Publish\Core\MVC\ConfigResolverInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\IpUtils;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 use Twig\Environment;
@@ -61,7 +62,7 @@ final class MaintenanceModeSubscriber implements EventSubscriberInterface
 
         $allowedIps = $this->configResolver->getParameter('maintenance_mode.allowed_ips');
 
-        if (\in_array($request->getClientIp(), $allowedIps, true)) {
+        if (IpUtils::checkIp($request->getClientIp(), $allowedIps)) {
             return;
         }
 

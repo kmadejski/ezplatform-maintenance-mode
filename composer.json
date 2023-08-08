@@ -1,12 +1,12 @@
 {
   "name": "kmadejski/ezplatform-maintenance-mode",
-  "description": "Maintenance mode bundle for eZ Platform v2.5+",
+  "description": "Maintenance mode bundle for Ibexa DXP v2.5+",
   "license": "GPL-2.0-only",
   "type": "ezplatform-bundle",
   "homepage": "https://github.com/kmadejski/ezplatform-maintenance-mode",
   "authors": [
     {
-      "name": "eZ Systems | Kamil Madejski",
+      "name": "Kamil Madejski",
       "email": "kamil.madejski@ez.no"
     }
   ],

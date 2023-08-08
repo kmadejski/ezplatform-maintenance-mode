@@ -1,5 +1,5 @@
-# eZ Platform Maintenance Mode Bundle
-This eZ Platform v2.5+ bundle provides a simple way to switch the whole site or selected SiteAccess to maintenance mode. 
+# Ibexa DXP Maintenance Mode Bundle
+This Ibexa DXP v3.x+ bundle provides a simple way to switch the whole site or selected SiteAccess to maintenance mode. 
 
 In this mode the site (or particular SiteAccess) will not be available for the end-users. Selected template is displayed instead.
 
@@ -10,12 +10,10 @@ In this mode the site (or particular SiteAccess) will not be available for the e
 composer require kmadejski/ezplatform-maintenance-mode
 ```
 
-- Enable the bundle in your `app/AppKernel.php` file:
+- If you do not use Symfony Flex, you have to enable the bundle manually in your `config/bundles.php` file:
 ```php
-    $bundles = [
-        ...
-        new EzSystems\EzPlatformMaintenanceModeBundle\EzSystemsEzPlatformMaintenanceModeBundle(),
-    ];
+    ...
+    EzSystems\EzPlatformMaintenanceModeBundle\EzSystemsEzPlatformMaintenanceModeBundle::class => ['all' => true]
 ```
 
 - Clear application cache:
@@ -27,7 +25,7 @@ php bin/console cache:clear --env=prod
 
 Bundles configuratiton is SiteAccess-aware, therefore all options are configurable in `ezplatform.yml` under `default` SiteAccess configuration key (if you want to switch the whole site into maintenance mode) or under selected SiteAccess:
 ```yaml
-ezpublish:
+ezplatform:
     system:
         default:
             maintenance_mode:
@@ -36,7 +34,7 @@ ezpublish:
 
 By default `503` HTTP response code is returned and a default template `@EzSystemsEzPlatformMaintenanceMode/maintenance.html.twig` is rendered. No IP addresses are allowed to visit the page. To modify this behaviour you can add an additional configuration as following example presents:
 ```yaml
-ezpublish:
+ezplatformgs:
     system:
         default:
             maintenance_mode:
